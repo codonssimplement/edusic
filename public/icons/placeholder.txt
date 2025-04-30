@@ -1,0 +1,4 @@
+
+Ce dossier contient les icônes de l'application mobile.
+Veuillez remplacer ce fichier par de vraies icônes aux dimensions suivantes :
+72x72, 96x96, 128x128, 144x144, 152x152, 192x192, 384x384, et 512x512 pixels.

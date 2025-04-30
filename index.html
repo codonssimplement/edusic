@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduSic - Apprenez en musique</title>
+    <meta name="description" content="Transformez vos révisions scolaires en une expérience musicale avec EduSic" />
+    <meta name="author" content="EduSic" />
+
+    <meta property="og:title" content="EduSic - Apprenez en musique" />
+    <meta property="og:description" content="Transformez vos révisions scolaires en une expérience musicale avec EduSic" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@edusic" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    
+    <!-- Ajout pour PWA -->
+    <meta name="theme-color" content="#1DB954" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Script pour enregistrer le service worker -->
+    <script type="module">
+      // En dev, désenregistrer tout Service Worker résiduel
+      if (!import.meta.env.PROD && 'serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations().then(regs => regs.forEach(reg => reg.unregister()));
+      }
+      // En prod, enregistrer le Service Worker
+      if (import.meta.env.PROD && 'serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/service-worker.js')
+            .then(registration => {
+              console.log('Service Worker enregistré avec succès:', registration.scope);
+            })
+            .catch(error => {
+              console.log('Échec de l\'enregistrement du Service Worker:', error);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>
