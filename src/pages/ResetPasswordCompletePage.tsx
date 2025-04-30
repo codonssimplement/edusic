@@ -80,9 +80,9 @@ const ResetPasswordCompletePage = () => {
   
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-black to-spotifyGray p-4">
+     
       <div className="flex items-center mb-6">
-        <Music size={32} className="text-eduGreen mr-2" />
-        <h1 className="text-3xl font-bold text-white">EduSic</h1>
+          <img src="/logoEduSic.png" alt="EduSic" className="w-24 h-24 mx-auto" />
       </div>
       
       <Card className="w-full max-w-md bg-spotifyGray border-spotifyGray">
