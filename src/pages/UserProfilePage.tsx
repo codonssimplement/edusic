@@ -62,18 +62,18 @@ const UserProfilePage = () => {
   return (
     <div className="max-w-4xl mx-auto">
       <h1 className="text-3xl font-bold text-white mb-8 flex items-center gap-3">
-        <User className="text-eduGreen" /> Mon Profil
+        <User className="text-eduPurple" /> Mon Profil
       </h1>
 
       <Tabs defaultValue="personal" className="w-full">
         <TabsList className="grid grid-cols-3 mb-8">
-          <TabsTrigger value="personal" className="data-[state=active]:bg-eduGreen">
+          <TabsTrigger value="personal" className="data-[state=active]:bg-eduPurple data-[state=inactive]:text-eduPurple/60">
             Informations personnelles
           </TabsTrigger>
-          <TabsTrigger value="badges" className="data-[state=active]:bg-eduGreen">
+          <TabsTrigger value="badges" className="data-[state=active]:bg-eduPurple data-[state=inactive]:text-eduPurple/60">
             Badges et activité
           </TabsTrigger>
-          <TabsTrigger value="settings" className="data-[state=active]:bg-eduGreen">
+          <TabsTrigger value="settings" className="data-[state=active]:bg-eduPurple data-[state=inactive]:text-eduPurple/60">
             Paramètres
           </TabsTrigger>
         </TabsList>
@@ -87,7 +87,7 @@ const UserProfilePage = () => {
               </div>
               {!isEditing ? (
                 <Button
-                  className="bg-eduGreen hover:bg-eduGreen/90 text-white"
+                  className="bg-eduPurple hover:bg-eduPurple/90 text-white"
                   onClick={() => setIsEditing(true)}
                 >
                   <Edit className="mr-2" size={18} />
@@ -95,7 +95,7 @@ const UserProfilePage = () => {
                 </Button>
               ) : (
                 <Button
-                  className="bg-eduGreen hover:bg-eduGreen/90 text-white"
+                  className="bg-eduPurple hover:bg-eduPurple/90 text-white"
                   onClick={handleSaveProfile}
                 >
                   <Check className="mr-2" size={18} />
@@ -201,7 +201,7 @@ const UserProfilePage = () => {
                   ))}
                   {isEditing && (
                     <button
-                      className="bg-eduGreen/20 text-eduGreen px-3 py-1 rounded-full text-sm flex items-center"
+                      className="bg-eduPurple/20 text-eduPurple px-3 py-1 rounded-full text-sm flex items-center"
                       onClick={() => {
                         const newSubject = prompt("Ajouter une matière");
                         if (newSubject && !userData.subjects.includes(newSubject)) {
@@ -232,8 +232,8 @@ const UserProfilePage = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   {badges.map((badge) => (
                     <div key={badge.id} className="bg-black/30 rounded-lg p-4 flex flex-col items-center text-center">
-                      <div className="w-16 h-16 rounded-full bg-eduGreen/20 flex items-center justify-center mb-3">
-                        <badge.icon size={32} className="text-eduGreen" />
+                      <div className="w-16 h-16 rounded-full bg-eduPurple/20 flex items-center justify-center mb-3">
+                        <badge.icon size={32} className="text-eduPurple" />
                       </div>
                       <h3 className="text-white font-medium mb-1">{badge.name}</h3>
                       <p className="text-spotifyLightGray text-sm mb-2">{badge.description}</p>
@@ -276,7 +276,7 @@ const UserProfilePage = () => {
                         ) : activity.type === "quiz" ? (
                           <Award size={20} className="text-purple-500" />
                         ) : (
-                          <Trophy size={20} className="text-green-500" />
+                          <Trophy size={20} className="text-purple-500" />
                         )}
                       </div>
                       <div className="flex-1">
@@ -284,7 +284,7 @@ const UserProfilePage = () => {
                           <h4 className="text-white font-medium">{activity.title}</h4>
                           <span className={`text-sm ${
                             activity.result === "Terminé" ? "text-blue-400" :
-                            parseInt(activity.result) >= 80 ? "text-green-400" :
+                            parseInt(activity.result) >= 80 ? "text-purple-400" :
                             "text-yellow-400"
                           }`}>
                             {activity.result}
@@ -297,7 +297,7 @@ const UserProfilePage = () => {
                 </div>
               </CardContent>
               <CardFooter className="border-t border-gray-700 justify-center py-4">
-                <Button variant="link" className="text-eduGreen">
+                <Button variant="link" className="text-eduPurple">
                   Voir toute l'activité
                 </Button>
               </CardFooter>
@@ -309,7 +309,7 @@ const UserProfilePage = () => {
           <Card className="bg-spotifyGray border-gray-800">
             <CardHeader>
               <CardTitle className="text-white text-xl flex items-center">
-                <Settings className="mr-2 text-eduGreen" size={20} />
+                <Settings className="mr-2 text-eduPurple" size={20} />
                 Paramètres de l'application
               </CardTitle>
               <CardDescription>Gérez vos préférences d'utilisation</CardDescription>

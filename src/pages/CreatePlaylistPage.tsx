@@ -161,7 +161,7 @@ const CreatePlaylistPage = () => {
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-spotifyLightGray" size={18} />
               <Input
                 placeholder="Rechercher des cours à ajouter..."
-                className="pl-10 bg-spotifyGray border-gray-700 focus:border-eduGreen text-white"
+                className="pl-10 bg-spotifyGray border-gray-700 focus:border-eduPurple text-white"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
@@ -197,7 +197,7 @@ const CreatePlaylistPage = () => {
                         <p className="text-white text-sm font-medium truncate">{course.title}</p>
                         <p className="text-spotifyLightGray text-xs truncate">{course.subject} • {course.level}</p>
                         <button 
-                          className="mt-1 text-xs flex items-center text-eduGreen hover:text-eduGreen/80"
+                          className="mt-1 text-xs flex items-center text-eduPurple hover:text-eduPurple/80"
                         >
                           <Plus size={14} className="mr-1" />
                           Ajouter à la playlist

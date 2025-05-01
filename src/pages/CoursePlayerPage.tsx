@@ -18,12 +18,12 @@ const CoursePlayerPage = () => {
     <PageTransition>
       <div className="flex flex-col h-full min-h-[calc(100vh-6rem)]">
         <CourseHeader course={course} />
-        <div className="animate-fade-in duration-500">
+        <div className="animate-fade-in duration-300">
           <LyricsPlayer course={course} />
         </div>
         <CourseInsights course={course} />
         <CourseContent course={course} />
-        <div className="mt-8 animate-fade-in duration-500 delay-300">
+        <div className="mt-8 animate-fade-in duration-300 delay-200">
           <CourseComments course={course} />
         </div>
       </div>

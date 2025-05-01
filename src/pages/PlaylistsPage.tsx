@@ -49,7 +49,7 @@ const PlaylistsPage = () => {
       <div className="flex justify-between items-center mb-8">
         <h1 className="text-3xl font-bold text-white">Mes Playlists</h1>
         <Button 
-          className="bg-eduGreen hover:bg-eduGreen/90 text-white"
+          className="bg-eduPurple hover:bg-eduPurple/90 text-white"
           onClick={() => navigate("/playlists/create")}
         >
           <PlusCircle className="mr-2" size={18} />
@@ -65,7 +65,7 @@ const PlaylistsPage = () => {
             Créez votre première playlist pour organiser vos cours préférés
           </p>
           <Button
-            className="bg-eduGreen hover:bg-eduGreen/90 text-white"
+            className="bg-eduPurple hover:bg-eduPurple/90 text-white"
             onClick={() => navigate("/playlists/create")}
           >
             <PlusCircle className="mr-2" size={18} />
@@ -85,7 +85,7 @@ const PlaylistsPage = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                 <Button 
                   size="icon" 
-                  className="absolute bottom-4 right-4 rounded-full w-12 h-12 bg-eduGreen hover:bg-eduGreen/90 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity"
+                  className="absolute bottom-4 right-4 rounded-full w-12 h-12 bg-eduPurple hover:bg-eduPurple/90 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity"
                 >
                   <Play size={24} className="ml-1" />
                 </Button>
@@ -108,7 +108,7 @@ const PlaylistsPage = () => {
                 <Button 
                   variant="outline" 
                   size="sm" 
-                  className="border-eduGreen text-eduGreen hover:bg-eduGreen/10"
+                  className="border-eduPurple text-eduPurple hover:bg-eduPurple/10"
                 >
                   Modifier
                 </Button>
@@ -127,7 +127,7 @@ const PlaylistsPage = () => {
           <Card className="bg-black/30 border-gray-800 border-dashed h-full flex flex-col justify-center items-center p-8 hover:bg-black/50 transition-colors cursor-pointer"
             onClick={() => navigate("/playlists/create")}
           >
-            <PlusCircle size={48} className="text-eduGreen mb-4" />
+            <PlusCircle size={48} className="text-eduPurple mb-4" />
             <h3 className="text-white text-lg font-medium mb-2">Créer une playlist</h3>
             <p className="text-spotifyLightGray text-center">
               Organisez vos cours préférés et créez des parcours d'apprentissage
@@ -168,7 +168,7 @@ const PlaylistsPage = () => {
             </div>
           </CardContent>
           <CardFooter className="border-t border-gray-700 justify-center py-4">
-            <Button variant="link" className="text-eduGreen">
+            <Button variant="link" className="text-eduPurple">
               Voir tout l'historique
             </Button>
           </CardFooter>

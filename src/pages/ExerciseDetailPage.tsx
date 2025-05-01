@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useCallback } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Book, Clock, AlertCircle, ChevronLeft, ChevronRight, Timer } from "lucide-react";
@@ -203,7 +202,7 @@ const ExerciseDetailPage = () => {
         <div className="mb-8">
           <Button 
             variant="outline" 
-            className="text-white border-gray-700"
+            className="text-eduPurple/50 border-gray-700"
             onClick={() => navigate("/exercises")}
           >
             <ChevronLeft className="mr-2" size={16} />
@@ -219,7 +218,7 @@ const ExerciseDetailPage = () => {
             <div className="mb-6">
               <CircularProgress value={scorePercentage} />
             </div>
-            <p className="text-xl text-white mb-4">
+            <p className="text-xl text-eduPurple/50 mb-4">
               Votre score : {score}/{exercise.questions.length}
             </p>
             <div className="text-spotifyLightGray mb-8">
@@ -228,7 +227,7 @@ const ExerciseDetailPage = () => {
                 : "Continuez à pratiquer pour vous améliorer."}
             </div>
             <div className="w-full space-y-6">
-              <h3 className="text-white font-semibold text-lg">Détail des réponses :</h3>
+              <h3 className="text-eduPurple/50 font-semibold text-lg">Détail des réponses :</h3>
               {exercise.questions.map((q, index) => (
                 <div key={index} className="bg-black/30 p-4 rounded-lg">
                   <div className="flex items-start mb-2">
@@ -236,12 +235,12 @@ const ExerciseDetailPage = () => {
                       {index + 1}
                     </div>
                     <div>
-                      <p className="text-white font-medium">{q.question}</p>
+                      <p className="text-eduPurple/50 font-medium">{q.question}</p>
                     </div>
                   </div>
                   
                   <div className="ml-9 mt-3">
-                    <p className="text-eduPurple mb-1">
+                    <p className="text-eduPurple/50 mb-1">
                       Réponse correcte : {q.options[q.correctAnswer]}
                     </p>
                     {answers[index] !== null && answers[index] !== q.correctAnswer && (
@@ -283,7 +282,7 @@ const ExerciseDetailPage = () => {
       <div className="flex justify-between items-center mb-8">
         <Button 
           variant="outline" 
-          className="text-white border-gray-700"
+          className="text-eduPurple/50 border-gray-700"
           onClick={() => navigate("/exercises")}
         >
           <ChevronLeft className="mr-2" size={16} />
@@ -328,20 +327,20 @@ const ExerciseDetailPage = () => {
               <Button
                 key={index}
                 variant="outline"
-                className={`justify-start text-left p-4 h-auto border border-gray-700 ${
+                className={`justify-start text-black hover:text-white p-4 h-auto border border-gray-700 ${
                   selectedAnswer === index 
                     ? hasAnswered 
                       ? index === currentQuestion.correctAnswer 
-                        ? 'bg-green-500/20 border-green-500 text-white' 
+                        ? 'bg-eduPurple/20 border-eduPurple text-white'
                         : 'bg-red-500/20 border-red-500 text-white'
-                      : 'bg-eduGreen/10 border-eduGreen text-white'
-                    : 'text-white hover:bg-white/10'
+                      : 'bg-black/30 border-eduPurple text-white'
+                    : ''
                 }`}
                 onClick={() => handleSelectAnswer(index)}
                 disabled={hasAnswered}
               >
                 <div className="flex items-center">
-                  <span className="flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full bg-black/50 mr-3">
+                  <span className="flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full bg-black/70 mr-3">
                     {String.fromCharCode(65 + index)}
                   </span>
                   {option}
@@ -371,7 +370,7 @@ const ExerciseDetailPage = () => {
         <CardFooter className="flex justify-between">
           <Button
             variant="outline"
-            className="text-white border-gray-700"
+            className="text-eduPurple/50 border-gray-700"
             onClick={handlePrevQuestion}
             disabled={currentQuestionIndex === 0}
           >

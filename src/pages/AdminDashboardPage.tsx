@@ -28,7 +28,7 @@ const AdminDashboardPage = () => {
   return (
     <div>
       <h1 className="text-3xl font-bold text-white mb-8 flex items-center gap-3">
-        <Settings className="text-eduGreen" /> Tableau de bord administrateur
+        <Settings className="text-eduPurple" /> Tableau de bord administrateur
       </h1>
       
       <Tabs value={activeTab} onValueChange={setActiveTab}>

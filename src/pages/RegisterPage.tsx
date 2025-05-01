@@ -1,7 +1,6 @@
-
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Music, Mail, Lock, User, Facebook } from "lucide-react";
+import { Music, Mail, Lock, User, Facebook, Eye, EyeOff } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -16,6 +15,7 @@ const RegisterPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [socialLoading, setSocialLoading] = useState<"google" | "facebook" | null>(null);
   const [passwordError, setPasswordError] = useState("");
@@ -163,10 +163,9 @@ const RegisterPage = () => {
   return (
     <PageTransition>
       <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-black to-spotifyGray p-4">
-        <div className="flex items-center mb-6">
-          <Music size={32} className="text-eduGreen mr-2" />
-          <h1 className="text-3xl font-bold text-white">EduSic</h1>
-        </div>
+      <div className="flex items-center mb-6">
+        <img src="/logoEduSic.png" alt="EduSic" className="w-24 h-24 mx-auto" />
+      </div>
         
         <Card className="w-full max-w-md bg-spotifyGray border-spotifyGray">
           <CardHeader>
@@ -176,7 +175,7 @@ const RegisterPage = () => {
             </CardDescription>
           </CardHeader>
           
-          <CardContent>
+          <CardContent className="space-y-4">
             <form onSubmit={handleRegister} className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
@@ -189,7 +188,7 @@ const RegisterPage = () => {
                       placeholder="Prénom"
                       value={firstName}
                       onChange={(e) => setFirstName(e.target.value)}
-                      className="pl-10 bg-black border-gray-800 focus:border-eduGreen"
+                      className="pl-10 bg-black text-white border-gray-800 focus:border-eduGreen"
                       required
                     />
                   </div>
@@ -204,7 +203,7 @@ const RegisterPage = () => {
                       placeholder="Nom"
                       value={lastName}
                       onChange={(e) => setLastName(e.target.value)}
-                      className="pl-10 bg-black border-gray-800 focus:border-eduGreen"
+                      className="pl-10 bg-black text-white border-gray-800 focus:border-eduGreen"
                       required
                     />
                   </div>
@@ -221,7 +220,7 @@ const RegisterPage = () => {
                     placeholder="votre@email.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="pl-10 bg-black border-gray-800 focus:border-eduGreen"
+                    className="pl-10 bg-black text-white border-gray-800 focus:border-eduGreen"
                     required
                   />
                 </div>
@@ -231,15 +230,22 @@ const RegisterPage = () => {
                 <Label htmlFor="password" className="text-white">Mot de passe</Label>
                 <div className="relative">
                   <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-spotifyLightGray" size={18} />
-                  <Input
-                    id="password"
-                    type="password"
-                    placeholder="Minimum 8 caractères"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    className="pl-10 bg-black border-gray-800 focus:border-eduGreen"
+                  <Input 
+                    id="password" 
+                    type={showPassword ? "text" : "password"} 
+                    value={password} 
+                    onChange={(e) => setPassword(e.target.value)} 
+                    placeholder="Minimum 8 caractères" 
+                    className="pl-10 bg-black text-white border-gray-800 focus:border-eduGreen"
                     required
                   />
+                  <button 
+                    type="button" 
+                    onClick={() => setShowPassword(!showPassword)}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-spotifyLightGray hover:text-white transition-colors"
+                  >
+                    {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+                  </button>
                 </div>
               </div>
               
@@ -247,15 +253,22 @@ const RegisterPage = () => {
                 <Label htmlFor="confirmPassword" className="text-white">Confirmer le mot de passe</Label>
                 <div className="relative">
                   <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-spotifyLightGray" size={18} />
-                  <Input
-                    id="confirmPassword"
-                    type="password"
-                    placeholder="Confirmez votre mot de passe"
-                    value={confirmPassword}
-                    onChange={(e) => setConfirmPassword(e.target.value)}
-                    className="pl-10 bg-black border-gray-800 focus:border-eduGreen"
+                  <Input 
+                    id="confirmPassword" 
+                    type={showPassword ? "text" : "password"} 
+                    value={confirmPassword} 
+                    onChange={(e) => setConfirmPassword(e.target.value)} 
+                    placeholder="Confirmez votre mot de passe" 
+                    className="pl-10 bg-black text-white border-gray-800 focus:border-eduGreen"
                     required
                   />
+                  <button 
+                    type="button" 
+                    onClick={() => setShowPassword(!showPassword)}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-spotifyLightGray hover:text-white transition-colors"
+                  >
+                    {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+                  </button>
                 </div>
                 {passwordError && (
                   <p className="text-red-500 text-sm mt-1">{passwordError}</p>
@@ -264,18 +277,18 @@ const RegisterPage = () => {
               
               <div className="text-xs text-spotifyLightGray">
                 En vous inscrivant, vous acceptez nos{" "}
-                <Link to="/terms" className="text-eduGreen hover:underline">
+                <Link to="/terms" className="text-eduPurple hover:underline">
                   Conditions d'utilisation
                 </Link>{" "}
                 et notre{" "}
-                <Link to="/privacy" className="text-eduGreen hover:underline">
+                <Link to="/privacy" className="text-eduPurple hover:underline">
                   Politique de confidentialité
                 </Link>.
               </div>
               
               <Button 
                 type="submit" 
-                className="w-full"
+                className="w-full bg-eduPurple hover:bg-eduPurple/90 text-black"
                 disabled={isLoading}
               >
                 {isLoading ? "Création du compte..." : "S'inscrire"}
@@ -320,7 +333,7 @@ const RegisterPage = () => {
             
             <p className="text-spotifyLightGray text-sm text-center mt-4">
               Vous avez déjà un compte ?{" "}
-              <Link to="/login" className="text-eduGreen hover:underline">
+              <Link to="/login" className="text-eduPurple  hover:underline">
                 Se connecter
               </Link>
             </p>

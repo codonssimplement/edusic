@@ -87,7 +87,7 @@ const LyricsPlayer = ({ course }: LyricsPlayerProps) => {
         <Button 
           variant="ghost" 
           onClick={() => setShowQuiz(false)} 
-          className="mb-4 text-white hover:text-eduGreen flex items-center gap-2"
+          className="mb-4 text-white hover:text-eduPurple flex items-center gap-2"
         >
           <ChevronLeft size={18} />
           Retour au cours
@@ -102,11 +102,11 @@ const LyricsPlayer = ({ course }: LyricsPlayerProps) => {
       {/* Course title reminder */}
       <div className="mb-4 flex items-center justify-between">
         <h3 className="text-lg text-white font-medium flex items-center gap-2">
-          <Music size={18} className="text-eduGreen" />
+          <Music size={18} className="text-eduPurple" />
           {course.title}
         </h3>
         {isCompleted && (
-          <div className="flex items-center gap-1 text-xs bg-eduGreen/20 text-eduGreen px-2 py-1 rounded-full">
+          <div className="flex items-center gap-1 text-xs bg-eduPurple/20 text-eduPurple px-2 py-1 rounded-full">
             <CheckCircle size={14} />
             <span>Terminé</span>
           </div>
@@ -125,7 +125,7 @@ const LyricsPlayer = ({ course }: LyricsPlayerProps) => {
               data-index={index}
               className={`text-center py-2 transition-all duration-500 transform ${
                 index === activeLyricIndex 
-                  ? 'text-eduGreen text-3xl font-bold scale-110 opacity-100' 
+                  ? 'text-eduPurple text-3xl font-bold scale-110 opacity-100' 
                   : index === activeLyricIndex - 1 || index === activeLyricIndex + 1
                     ? 'text-white text-xl scale-100 opacity-80'
                     : index === activeLyricIndex - 2 || index === activeLyricIndex + 2
@@ -144,12 +144,12 @@ const LyricsPlayer = ({ course }: LyricsPlayerProps) => {
         <Button 
           variant="outline" 
           className={`flex items-center gap-2 transition-all duration-300 ${
-            isCompleted ? 'bg-eduGreen/10 text-eduGreen border-eduGreen' : 'text-white border-gray-700 hover:border-eduGreen hover:text-eduGreen'
+            isCompleted ? 'bg-eduPurple/10 text-eduPurple border-eduPurple' : 'text-white border-gray-700 hover:border-eduPurple hover:text-eduPurple'
           }`}
           onClick={handleMarkAsCompleted}
           disabled={isCompleted}
         >
-          <CheckCircle className={isCompleted ? 'fill-eduGreen text-white' : ''} size={18} />
+          <CheckCircle className={isCompleted ? 'fill-eduPurple text-white' : ''} size={18} />
           {isCompleted ? 'Cours terminé' : 'Marquer comme terminé'}
         </Button>
       </div>
@@ -168,7 +168,7 @@ const LyricsPlayer = ({ course }: LyricsPlayerProps) => {
         <div className="mt-6 text-center p-4 bg-black/20 rounded-lg border border-gray-800 animate-fade-in">
           <p className="text-white mb-2">Vous avez terminé ce cours !</p>
           <Button 
-            className="bg-eduGreen hover:bg-eduGreen/90 text-white"
+            className="bg-eduPurple hover:bg-eduPurple/90 text-white"
             onClick={() => setShowQuiz(true)}
           >
             Commencer le quiz

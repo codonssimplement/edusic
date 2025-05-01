@@ -119,7 +119,7 @@ const CourseComments = ({ course }: CourseCommentsProps) => {
   return (
     <div className="w-full max-w-4xl mx-auto bg-spotifyGray bg-opacity-30 p-6 rounded-lg mb-8">
       <div className="flex items-center gap-2 mb-6">
-        <MessageSquare className="text-eduGreen" size={24} />
+        <MessageSquare className="text-eduPurple" size={24} />
         <h2 className="text-xl text-white font-bold">Commentaires ({comments.length})</h2>
       </div>
       
@@ -134,7 +134,7 @@ const CourseComments = ({ course }: CourseCommentsProps) => {
           <div className="flex justify-end">
             <Button 
               onClick={handleComment}
-              className="bg-eduGreen hover:bg-eduGreen/90 text-white"
+              className="bg-eduPurple hover:bg-eduPurple/90 text-white"
               disabled={!commentText.trim()}
             >
               Publier
@@ -144,7 +144,7 @@ const CourseComments = ({ course }: CourseCommentsProps) => {
       ) : (
         <div className="bg-black/20 p-4 rounded-md mb-6 text-center">
           <p className="text-white mb-2">Connectez-vous pour participer à la discussion</p>
-          <Button variant="outline" className="text-eduGreen border-eduGreen hover:bg-eduGreen/10">
+          <Button variant="outline" className="text-eduPurple border-eduPurple hover:bg-eduPurple/10">
             Se connecter
           </Button>
         </div>
@@ -156,7 +156,7 @@ const CourseComments = ({ course }: CourseCommentsProps) => {
             <div className="flex items-start gap-3">
               <Avatar className="h-10 w-10 border border-gray-700">
                 <AvatarImage src={comment.avatar} />
-                <AvatarFallback className="bg-eduGreen/20 text-eduGreen">
+                <AvatarFallback className="bg-eduPurple/20 text-eduPurple">
                   {comment.username.substring(0, 2).toUpperCase()}
                 </AvatarFallback>
               </Avatar>
@@ -199,12 +199,12 @@ const CourseComments = ({ course }: CourseCommentsProps) => {
                     size="sm"
                     className={`flex items-center gap-1 text-xs px-2 py-1 h-auto ${
                       comment.userHasLiked 
-                        ? 'text-eduGreen' 
+                        ? 'text-eduPurple' 
                         : 'text-spotifyLightGray hover:text-white'
                     }`}
                     onClick={() => handleLike(comment.id)}
                   >
-                    <ThumbsUp size={14} className={comment.userHasLiked ? 'fill-eduGreen' : ''} />
+                    <ThumbsUp size={14} className={comment.userHasLiked ? 'fill-eduPurple' : ''} />
                     <span>{comment.likes}</span>
                   </Button>
                 </div>

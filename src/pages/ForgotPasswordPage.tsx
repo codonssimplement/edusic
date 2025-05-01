@@ -41,8 +41,7 @@ const ForgotPasswordPage = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-black to-spotifyGray p-4">
       <div className="flex items-center mb-6">
-        <Music size={32} className="text-eduGreen mr-2" />
-        <h1 className="text-3xl font-bold text-white">EduSic</h1>
+        <img src="/logoEduSic.png" alt="EduSic" className="w-24 h-24 mx-auto" />
       </div>
       
       <Card className="w-full max-w-md bg-spotifyGray border-spotifyGray">
@@ -56,14 +55,14 @@ const ForgotPasswordPage = () => {
         <CardContent>
           {isSubmitted ? (
             <div className="text-center space-y-4">
-              <CheckCircle size={64} className="mx-auto text-eduGreen" />
+              <CheckCircle size={64} className="mx-auto text-eduPurple" />
               <h2 className="text-white text-xl">Email envoyé !</h2>
               <p className="text-spotifyLightGray">
                 Si un compte existe avec cette adresse email, vous recevrez un lien pour réinitialiser votre mot de passe.
               </p>
               <div className="mt-6">
                 <Link to="/login">
-                  <Button className="bg-eduGreen hover:bg-eduGreen/90 text-black">
+                  <Button className="bg-eduPurple hover:bg-eduPurple/90 text-black">
                     Retour à la connexion
                   </Button>
                 </Link>
@@ -81,7 +80,7 @@ const ForgotPasswordPage = () => {
                     placeholder="votre@email.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="pl-10 bg-black border-gray-800 focus:border-eduGreen"
+                    className="pl-10 bg-black text-white border-gray-800 focus:border-eduPurple"
                     required
                   />
                 </div>
@@ -92,14 +91,14 @@ const ForgotPasswordPage = () => {
               
               <Button 
                 type="submit" 
-                className="w-full bg-eduGreen hover:bg-eduGreen/90 text-black"
+                className="w-full bg-eduPurple hover:bg-eduPurple/90 text-white"
                 disabled={isLoading}
               >
                 {isLoading ? "Envoi en cours..." : "Réinitialiser le mot de passe"}
               </Button>
               
               <div className="text-center mt-4">
-                <Link to="/login" className="text-sm text-eduGreen hover:underline">
+                <Link to="/login" className="text-sm text-eduPurple hover:underline">
                   Retour à la connexion
                 </Link>
               </div>

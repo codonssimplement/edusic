@@ -85,8 +85,8 @@ const NewReleasesPage = () => {
         className="mb-8"
       >
         <div className="flex items-center gap-3 mb-4">
-          <div className="bg-eduGreen/20 p-2 rounded-lg">
-            <TrendingUp className="text-eduGreen" size={28} />
+          <div className="bg-eduPurple/20 p-2 rounded-lg">
+            <TrendingUp className="text-eduPurple" size={28} />
           </div>
           <h1 className="text-3xl font-bold text-white">Nouveautés</h1>
         </div>
@@ -120,7 +120,7 @@ const NewReleasesPage = () => {
                   />
                   <div className="absolute bottom-0 left-0 right-0 p-4 z-20">
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-xs bg-eduGreen text-black font-medium px-2 py-1 rounded-full inline-block">
+                      <span className="text-xs bg-eduPurple text-black font-medium px-2 py-1 rounded-full inline-block">
                         NOUVEAU
                       </span>
                       <span className="flex items-center gap-1 bg-black/40 backdrop-blur-sm text-white text-xs px-2 py-1 rounded-full">
@@ -154,7 +154,7 @@ const NewReleasesPage = () => {
         className="mb-10"
       >
         <h2 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
-          <Headphones className="text-eduGreen" />
+          <Headphones className="text-eduPurple" />
           Albums et compilations
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
@@ -183,7 +183,7 @@ const NewReleasesPage = () => {
             whileHover={{ scale: 1.03 }}
             className="relative rounded-lg overflow-hidden"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-green-800 to-teal-700 z-0"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-800 to-indigo-700 z-0"></div>
             <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1517842536804-bf6629e2c291?q=80&w=1000')] opacity-20 mix-blend-overlay"></div>
             <div className="relative z-10 p-6">
               <h3 className="text-lg font-bold text-white mb-2">Langues étrangères</h3>
@@ -204,7 +204,7 @@ const NewReleasesPage = () => {
             whileHover={{ scale: 1.03 }}
             className="relative rounded-lg overflow-hidden"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-red-800 to-orange-700 z-0"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-800 to-indigo-700 z-0"></div>
             <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1507413245164-6160d8298b31?q=80&w=1000')] opacity-20 mix-blend-overlay"></div>
             <div className="relative z-10 p-6">
               <h3 className="text-lg font-bold text-white mb-2">Sciences en mélodie</h3>
@@ -230,8 +230,8 @@ const NewReleasesPage = () => {
         className="bg-black/30 backdrop-blur-sm border border-gray-800 rounded-lg p-6"
       >
         <div className="flex items-center gap-2 mb-4">
-          <div className="bg-eduGreen/20 p-1.5 rounded-md">
-            <Star className="text-eduGreen" size={18} />
+          <div className="bg-eduPurple/20 p-1.5 rounded-md">
+            <Star className="text-eduPurple" size={18} />
           </div>
           <h3 className="text-lg font-bold text-white">Promotion du moment</h3>
         </div>
@@ -250,7 +250,7 @@ const NewReleasesPage = () => {
               Profitez de contenus exclusifs, de quiz avancés et d'un suivi personnalisé de vos progrès.
             </p>
             <div className="flex flex-wrap gap-4">
-              <button className="bg-eduGreen hover:bg-eduGreen/90 text-black font-medium px-4 py-2 rounded-full">
+              <button className="bg-eduPurple hover:bg-eduPurple/90 text-black font-medium px-4 py-2 rounded-full">
                 Découvrir l'offre
               </button>
               <button className="bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-full">

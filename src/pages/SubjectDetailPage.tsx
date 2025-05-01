@@ -260,7 +260,7 @@ const SubjectDetailPage = () => {
         <h2 className="text-2xl font-bold text-white mb-4">Matière non trouvée</h2>
         <p className="text-spotifyLightGray mb-6">La matière que vous recherchez n'existe pas.</p>
         <Link to="/subjects">
-          <Button variant="outline" className="bg-eduGreen text-black hover:bg-eduGreen/80">
+          <Button variant="outline" className="bg-eduPurple text-black hover:bg-eduPurple/80">
             Retour aux matières
           </Button>
         </Link>
@@ -292,7 +292,7 @@ const SubjectDetailPage = () => {
         <div className="flex flex-wrap gap-2 mb-6">
           <Button 
             variant={activeLevel === "all" ? "default" : "outline"}
-            className={`${activeLevel === "all" ? "bg-eduGreen text-black" : "bg-spotifyGray text-white"}`}
+            className={`${activeLevel === "all" ? "bg-eduPurple text-black" : "bg-spotifyGray text-white"}`}
             onClick={() => setActiveLevel("all")}
           >
             Tous les niveaux
@@ -301,7 +301,7 @@ const SubjectDetailPage = () => {
             <Button 
               key={level}
               variant={activeLevel === level ? "default" : "outline"}
-              className={`${activeLevel === level ? "bg-eduGreen text-black" : "bg-spotifyGray text-white"}`}
+              className={`${activeLevel === level ? "bg-eduPurple text-black" : "bg-spotifyGray text-white"}`}
               onClick={() => setActiveLevel(level)}
             >
               {level}
@@ -316,7 +316,7 @@ const SubjectDetailPage = () => {
                 <img src={course.image} alt={course.title} className="w-full aspect-video object-cover" />
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
                   <Link to={`/player/${course.id}`}>
-                    <Button className="rounded-full w-12 h-12 p-0 bg-eduGreen text-black hover:bg-eduGreen/90 hover:scale-110 transition-transform">
+                    <Button className="rounded-full w-12 h-12 p-0 bg-eduPurple text-black hover:bg-eduPurple/90 hover:scale-110 transition-transform">
                       <PlayCircle size={24} />
                     </Button>
                   </Link>
@@ -329,7 +329,7 @@ const SubjectDetailPage = () => {
                     <p className="text-spotifyLightGray text-sm">{course.level}</p>
                   </div>
                   <button 
-                    className="text-spotifyLightGray hover:text-eduGreen p-1"
+                    className="text-spotifyLightGray hover:text-eduPurple p-1"
                     onClick={() => addToPlaylist(course.id)}
                   >
                     <BookmarkPlus size={18} />

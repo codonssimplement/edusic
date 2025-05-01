@@ -42,7 +42,7 @@ const SearchPage = () => {
             placeholder="Chercher un cours, une matière, un niveau..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="pl-10 h-12 bg-spotifyGray border-spotifyGray focus:border-eduGreen text-white"
+            className="pl-10 h-12 bg-spotifyGray border-spotifyGray focus:border-eduPurple text-white"
           />
         </div>
       </div>
@@ -83,7 +83,7 @@ const SearchPage = () => {
                         <div className="relative mb-4 aspect-square bg-spotifyGray rounded-md overflow-hidden">
                           <img src={course.image} alt={course.title} className="w-full h-full object-cover" />
                           <div className="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <button className="bg-eduGreen rounded-full p-3 transform translate-y-4 group-hover:translate-y-0 transition-transform">
+                            <button className="bg-eduPurple rounded-full p-3 transform translate-y-4 group-hover:translate-y-0 transition-transform">
                               <Music className="text-white" size={20} />
                             </button>
                           </div>
@@ -103,7 +103,7 @@ const SearchPage = () => {
                         <div className="relative mb-4 aspect-square bg-spotifyGray rounded-md overflow-hidden">
                           <img src={playlist.image} alt={playlist.title} className="w-full h-full object-cover" />
                           <div className="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <button className="bg-eduGreen rounded-full p-3 transform translate-y-4 group-hover:translate-y-0 transition-transform">
+                            <button className="bg-eduPurple rounded-full p-3 transform translate-y-4 group-hover:translate-y-0 transition-transform">
                               <Music className="text-white" size={20} />
                             </button>
                           </div>
@@ -125,7 +125,7 @@ const SearchPage = () => {
                     <div className="relative mb-4 aspect-square bg-spotifyGray rounded-md overflow-hidden">
                       <img src={course.image} alt={course.title} className="w-full h-full object-cover" />
                       <div className="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                        <button className="bg-eduGreen rounded-full p-3 transform translate-y-4 group-hover:translate-y-0 transition-transform">
+                        <button className="bg-eduPurple rounded-full p-3 transform translate-y-4 group-hover:translate-y-0 transition-transform">
                           <Music className="text-white" size={20} />
                         </button>
                       </div>
@@ -145,7 +145,7 @@ const SearchPage = () => {
                     <div className="relative mb-4 aspect-square bg-spotifyGray rounded-md overflow-hidden">
                       <img src={playlist.image} alt={playlist.title} className="w-full h-full object-cover" />
                       <div className="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                        <button className="bg-eduGreen rounded-full p-3 transform translate-y-4 group-hover:translate-y-0 transition-transform">
+                        <button className="bg-eduPurple rounded-full p-3 transform translate-y-4 group-hover:translate-y-0 transition-transform">
                           <Music className="text-white" size={20} />
                         </button>
                       </div>

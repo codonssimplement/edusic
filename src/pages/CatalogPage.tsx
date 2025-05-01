@@ -136,16 +136,16 @@ const CatalogPage = () => {
           
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="outline" className="border-gray-700 text-white">
-                <Filter size={18} className="mr-2" />
+              <Button variant="outline" className="border-gray-700 hover:bg-eduPurple cursor-pointer text-eduPurple">
+                <Filter size={18} className="mr-2 " />
                 {selectedLevel || "Niveau"}
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-spotifyGray border-gray-700 text-white">
               <DropdownMenuLabel>Filtrer par niveau</DropdownMenuLabel>
-              <DropdownMenuSeparator className="bg-gray-700" />
+              <DropdownMenuSeparator className="bg-eduPurple" />
               <DropdownMenuItem 
-                className="hover:bg-black/30 cursor-pointer"
+                className="hover:bg-eduPurple cursor-pointer"
                 onClick={() => setSelectedLevel(null)}
               >
                 Tous les niveaux
@@ -153,7 +153,7 @@ const CatalogPage = () => {
               {allLevels.map(level => (
                 <DropdownMenuItem 
                   key={level}
-                  className="hover:bg-black/30 cursor-pointer"
+                  className="hover:bg-eduPurple cursor-pointer"
                   onClick={() => setSelectedLevel(level)}
                 >
                   {level}

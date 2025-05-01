@@ -88,19 +88,19 @@ const SubjectsPage = () => {
       <div>
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8">
           <h1 className="text-3xl font-bold text-white mb-4 md:mb-0 flex items-center gap-3">
-            <BookOpen className="text-eduGreen" /> Matières
+            <BookOpen className="text-eduPurple" /> Matières
           </h1>
           
           <div className="flex flex-wrap gap-3">
             <div className="bg-black/30 rounded-lg border border-white/10 p-1 flex">
               <button 
-                className={`p-2 rounded ${viewMode === 'grid' ? 'bg-eduGreen/20 text-eduGreen' : 'text-white'}`}
+                className={`p-2 rounded ${viewMode === 'grid' ? 'bg-eduPurple/20 text-eduPurple' : 'text-white'}`}
                 onClick={() => setViewMode('grid')}
               >
                 <LayoutGrid size={18} />
               </button>
               <button 
-                className={`p-2 rounded ${viewMode === 'list' ? 'bg-eduGreen/20 text-eduGreen' : 'text-white'}`}
+                className={`p-2 rounded ${viewMode === 'list' ? 'bg-eduPurple/20 text-eduPurple' : 'text-white'}`}
                 onClick={() => setViewMode('list')}
               >
                 <BookCheck size={18} />
@@ -112,7 +112,7 @@ const SubjectsPage = () => {
               {levels.map(level => (
                 <button 
                   key={level} 
-                  className={`px-3 py-1 text-sm rounded ${selectedLevel === level ? 'bg-eduGreen text-black font-medium' : 'text-white'}`}
+                  className={`px-3 py-1 text-sm rounded ${selectedLevel === level ? 'bg-eduPurple text-black font-medium' : 'text-white'}`}
                   onClick={() => setSelectedLevel(level)}
                 >
                   {level === "all" ? "Tous" : level}
@@ -154,7 +154,7 @@ const SubjectsPage = () => {
               <motion.div 
                 key={subject.id} 
                 variants={itemAnimation}
-                className="flex items-center gap-4 bg-black/20 rounded-lg p-4 border border-white/10 hover:bg-black/30 hover:border-eduGreen/30 transition-all"
+                className="flex items-center gap-4 bg-black/20 rounded-lg p-4 border border-white/10 hover:bg-black/30 hover:border-eduPurple/30 transition-all"
               >
                 <div className={`w-12 h-12 ${subject.color} rounded-lg flex items-center justify-center`}>
                   <Music className="text-white" size={20} />

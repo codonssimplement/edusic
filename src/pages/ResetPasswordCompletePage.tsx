@@ -1,7 +1,6 @@
-
 import { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import { Music, Lock, CheckCircle } from "lucide-react";
+import { Music, Lock, CheckCircle, Eye, EyeOff } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -11,6 +10,7 @@ import { useToast } from "@/components/ui/use-toast";
 const ResetPasswordCompletePage = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [isComplete, setIsComplete] = useState(false);
   const [passwordError, setPasswordError] = useState("");
@@ -66,7 +66,7 @@ const ResetPasswordCompletePage = () => {
             <div className="text-center text-white space-y-4">
               <p>Ce lien n'est pas valide ou a expiré.</p>
               <Button 
-                className="bg-eduGreen hover:bg-eduGreen/90 text-black"
+                className="bg-eduPurple hover:bg-eduPurple/90 text-black"
                 onClick={() => navigate("/reset-password")}
               >
                 Demander un nouveau lien
@@ -96,14 +96,14 @@ const ResetPasswordCompletePage = () => {
         <CardContent>
           {isComplete ? (
             <div className="text-center space-y-4">
-              <CheckCircle size={64} className="mx-auto text-eduGreen" />
+              <CheckCircle size={64} className="mx-auto text-eduPurple" />
               <h2 className="text-white text-xl">Mot de passe réinitialisé !</h2>
               <p className="text-spotifyLightGray">
                 Votre mot de passe a été réinitialisé avec succès. Vous pouvez maintenant vous connecter à votre compte.
               </p>
               <div className="mt-6">
                 <Button 
-                  className="bg-eduGreen hover:bg-eduGreen/90 text-black"
+                  className="bg-eduPurple hover:bg-eduPurple/90 text-black"
                   onClick={() => navigate("/login")}
                 >
                   Se connecter
@@ -118,13 +118,20 @@ const ResetPasswordCompletePage = () => {
                   <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-spotifyLightGray" size={18} />
                   <Input
                     id="password"
-                    type="password"
+                    type={showPassword ? "text" : "password"}
                     placeholder="Minimum 8 caractères"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    className="pl-10 bg-black border-gray-800 focus:border-eduGreen"
+                    className="pl-10 bg-black text-white border-gray-800 focus:border-eduPurple"
                     required
                   />
+                  <button 
+                    type="button" 
+                    onClick={() => setShowPassword(!showPassword)}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-spotifyLightGray hover:text-white transition-colors"
+                  >
+                    {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+                  </button>
                 </div>
               </div>
               
@@ -134,13 +141,20 @@ const ResetPasswordCompletePage = () => {
                   <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-spotifyLightGray" size={18} />
                   <Input
                     id="confirmPassword"
-                    type="password"
+                    type={showPassword ? "text" : "password"}
                     placeholder="Confirmez votre mot de passe"
                     value={confirmPassword}
                     onChange={(e) => setConfirmPassword(e.target.value)}
-                    className="pl-10 bg-black border-gray-800 focus:border-eduGreen"
+                    className="pl-10 bg-black text-white border-gray-800 focus:border-eduPurple"
                     required
                   />
+                  <button 
+                    type="button" 
+                    onClick={() => setShowPassword(!showPassword)}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-spotifyLightGray hover:text-white transition-colors"
+                  >
+                    {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+                  </button>
                 </div>
                 {passwordError && (
                   <p className="text-red-500 text-sm mt-1">{passwordError}</p>
@@ -149,7 +163,7 @@ const ResetPasswordCompletePage = () => {
               
               <Button 
                 type="submit" 
-                className="w-full bg-eduGreen hover:bg-eduGreen/90 text-black"
+                className="w-full bg-eduPurple hover:bg-eduPurple/90 text-black"
                 disabled={isLoading}
               >
                 {isLoading ? "Mise à jour en cours..." : "Réinitialiser le mot de passe"}

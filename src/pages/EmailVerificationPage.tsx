@@ -126,12 +126,12 @@ const EmailVerificationPage = () => {
                 <Button 
                   onClick={handleResendEmail}
                   disabled={countdown > 0 || isVerifying}
-                  className="w-full bg-spotifyGray border border-gray-700 text-white hover:bg-black/40"
+                  className="w-full bg-spotifyGray border border-gray-700 bg-eduPurple hover:bg-eduPurple/90 hover:text-white"
                 >
                   {countdown > 0 
                     ? (
-                      <span className="flex items-center">
-                        <RefreshCw size={16} className="mr-2 animate-spin" />
+                      <span className="flex items-center  ">
+                        <RefreshCw size={16} className="mr-2 animate-spin " />
                         Renvoyer ({countdown}s)
                       </span>
                     ) 
