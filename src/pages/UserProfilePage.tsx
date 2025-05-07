@@ -60,23 +60,23 @@ const UserProfilePage = () => {
   ];
 
   return (
-    <div className="max-w-4xl mx-auto">
-      <h1 className="text-3xl font-bold text-white mb-8 flex items-center gap-3">
+    <div className="max-w-4xl mx-auto pt-16 md:pt-0">
+      <h1 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
         <User className="text-eduPurple" /> Mon Profil
       </h1>
 
       <Tabs defaultValue="personal" className="w-full">
-        <TabsList className="grid grid-cols-3 mb-8">
-          <TabsTrigger value="personal" className="data-[state=active]:bg-eduPurple data-[state=inactive]:text-eduPurple/60">
-            Informations personnelles
-          </TabsTrigger>
-          <TabsTrigger value="badges" className="data-[state=active]:bg-eduPurple data-[state=inactive]:text-eduPurple/60">
-            Badges et activité
-          </TabsTrigger>
-          <TabsTrigger value="settings" className="data-[state=active]:bg-eduPurple data-[state=inactive]:text-eduPurple/60">
-            Paramètres
-          </TabsTrigger>
-        </TabsList>
+      <TabsList className="mb-8 grid grid-cols-3 gap-2 rounded-lg bg-spotifyGray p-1">
+  <TabsTrigger value="personal" className="text-xs sm:text-sm data-[state=active]:bg-eduPurple/80 data-[state=inactive]:text-eduPurple/70">
+    Informations
+  </TabsTrigger>
+  <TabsTrigger value="badges" className="text-xs sm:text-sm data-[state=active]:bg-eduPurple/80 data-[state=inactive]:text-eduPurple/70">
+    Badges
+  </TabsTrigger>
+  <TabsTrigger value="settings" className="text-xs sm:text-sm data-[state=active]:bg-eduPurple/80 data-[state=inactive]:text-eduPurple/70">
+    Paramètres
+  </TabsTrigger>
+</TabsList>
 
         <TabsContent value="personal">
           <Card className="bg-spotifyGray border-gray-800">

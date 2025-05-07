@@ -198,7 +198,7 @@ const ExerciseDetailPage = () => {
 
   if (showResults) {
     return (
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-4xl mx-auto pt-16 md:pt-0">
         <div className="mb-8">
           <Button 
             variant="outline" 

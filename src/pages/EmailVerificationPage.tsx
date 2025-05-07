@@ -78,7 +78,7 @@ const EmailVerificationPage = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-black to-spotifyGray p-4">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-black to-spotifyGray p-4 pt-16 md:pt-0">
       <Card className="w-full max-w-md bg-spotifyGray border-spotifyGray">
         <CardHeader className="text-center">
           <CardTitle className="text-xl text-white">Vérification de l'email</CardTitle>

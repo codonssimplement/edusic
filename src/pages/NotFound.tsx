@@ -17,7 +17,7 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-black to-spotifyGray p-6">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-black to-spotifyGray p-6 pt-16 md:pt-0">
       <motion.div 
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}

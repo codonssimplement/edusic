@@ -74,7 +74,7 @@ const ProfileCompletionPage = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-black to-spotifyGray p-4">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-black to-spotifyGray p-4 pt-16 md:pt-0">
       <div className="flex items-center mb-6">
           <img src="/logoEduSic.png" alt="EduSic" className="w-24 h-24 mx-auto" />
         </div>
@@ -82,7 +82,7 @@ const ProfileCompletionPage = () => {
       
       <Card className="w-full max-w-lg bg-spotifyGray border-spotifyGray">
         <CardHeader>
-          <CardTitle className="text-xl text-white text-center">Complétez votre profil</CardTitle>
+          <CardTitle className="text-2xl text-white text-center">Complétez votre profil</CardTitle>
           <CardDescription className="text-spotifyLightGray text-center">
             Personnalisez votre expérience d'apprentissage
           </CardDescription>

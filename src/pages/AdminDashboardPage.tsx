@@ -26,8 +26,8 @@ const AdminDashboardPage = () => {
   ];
 
   return (
-    <div>
-      <h1 className="text-3xl font-bold text-white mb-8 flex items-center gap-3">
+    <div className="pt-16 md:pt-0">
+      <h1 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
         <Settings className="text-eduPurple" /> Tableau de bord administrateur
       </h1>
       

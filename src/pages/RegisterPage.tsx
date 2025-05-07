@@ -162,14 +162,14 @@ const RegisterPage = () => {
 
   return (
     <PageTransition>
-      <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-black to-spotifyGray p-4">
+      <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-black to-spotifyGray p-4 pt-16 md:pt-0">
       <div className="flex items-center mb-6">
         <img src="/logoEduSic.png" alt="EduSic" className="w-24 h-24 mx-auto" />
       </div>
         
         <Card className="w-full max-w-md bg-spotifyGray border-spotifyGray">
           <CardHeader>
-            <CardTitle className="text-xl text-white text-center">Créez votre compte EduSic</CardTitle>
+            <CardTitle className="text-2xl text-white text-center">Créez votre compte EduSic</CardTitle>
             <CardDescription className="text-spotifyLightGray text-center">
               Commencez à apprendre en musique
             </CardDescription>

@@ -41,7 +41,7 @@ const HomePage = () => {
 
   return (
     <PageTransition>
-      <div className="pb-20">
+      <div className="pb-20  pt-16 md:pt-0">
         {isLoggedIn && user ? (
           <UserDashboard />
         ) : (

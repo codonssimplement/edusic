@@ -280,9 +280,9 @@ const SubjectDetailPage = () => {
   };
 
   return (
-    <div>
+    <div className="pt-16 md:pt-0">
       <div className={`${subject.color} px-6 py-10 rounded-lg mb-8`}>
-        <h1 className="text-3xl font-bold text-white mb-4 flex items-center gap-3">
+        <h1 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
           <BookOpen /> {subject.name}
         </h1>
         <p className="text-white/90 text-lg">{subject.description}</p>

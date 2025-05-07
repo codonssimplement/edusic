@@ -31,8 +31,8 @@ const SearchPage = () => {
   };
 
   return (
-    <div>
-      <h1 className="text-3xl font-bold text-white mb-6">Recherche</h1>
+    <div className="pt-16 md:pt-0">
+      <h1 className="text-2xl font-bold text-white mb-6 flex items-center gap-2"><Search className="text-eduPurple" size={20} />Recherche</h1>
       
       <div className="mb-8">
         <div className="relative">
@@ -48,7 +48,7 @@ const SearchPage = () => {
       </div>
 
       <div className="mb-8">
-        <h2 className="text-xl font-bold text-white mb-4">Parcourir par matière</h2>
+        <h2 className="text-xl font-bold text-white mb-4 flex items-center gap-2"><BookOpen className="text-eduPurple" size={20} />Parcourir par matière</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
           {subjects.map((subject) => (
             <div 
@@ -76,7 +76,7 @@ const SearchPage = () => {
             <TabsContent value="all">
               <div className="space-y-8">
                 <section>
-                  <h2 className="text-xl font-bold text-white mb-4">Cours</h2>
+                  <h2 className="text-xl font-bold text-white mb-4 flex items-center gap-2"><Music className="text-eduPurple" size={20} />Cours</h2>
                   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5">
                     {searchResults.courses.map((course) => (
                       <div key={course.id} className="music-card group cursor-pointer">
@@ -96,7 +96,7 @@ const SearchPage = () => {
                 </section>
                 
                 <section>
-                  <h2 className="text-xl font-bold text-white mb-4">Playlists</h2>
+                  <h2 className="text-xl font-bold text-white mb-4 flex items-center gap-2"><Music className="text-eduPurple" size={20} />Playlists</h2>
                   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5">
                     {searchResults.playlists.map((playlist) => (
                       <div key={playlist.id} className="music-card group cursor-pointer">
@@ -118,7 +118,7 @@ const SearchPage = () => {
             </TabsContent>
             
             <TabsContent value="courses">
-              <h2 className="text-xl font-bold text-white mb-4">Cours</h2>
+              <h2 className="text-xl font-bold text-white mb-4 flex items-center gap-2"><Music className="text-eduPurple" size={20} />Cours</h2>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5">
                 {searchResults.courses.map((course) => (
                   <div key={course.id} className="music-card group cursor-pointer">
@@ -138,7 +138,7 @@ const SearchPage = () => {
             </TabsContent>
             
             <TabsContent value="playlists">
-              <h2 className="text-xl font-bold text-white mb-4">Playlists</h2>
+              <h2 className="text-xl font-bold text-white mb-4 flex items-center gap-2"><Music className="text-eduPurple" size={20} />Playlists</h2>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5">
                 {searchResults.playlists.map((playlist) => (
                   <div key={playlist.id} className="music-card group cursor-pointer">

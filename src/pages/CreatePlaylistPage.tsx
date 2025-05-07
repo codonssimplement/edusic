@@ -73,9 +73,9 @@ const CreatePlaylistPage = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row gap-8">
+    <div className="flex flex-col md:flex-row gap-8 pt-16 md:pt-0">
       <div className="md:w-1/2">
-        <h1 className="text-3xl font-bold text-white mb-6">Créer une nouvelle playlist</h1>
+        <h1 className="text-2xl font-bold text-white mb-6">Créer une nouvelle playlist</h1>
         
         <div className="bg-spotifyGray bg-opacity-30 p-6 rounded-lg mb-8">
           <div className="mb-6">

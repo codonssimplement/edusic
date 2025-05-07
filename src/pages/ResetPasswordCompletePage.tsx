@@ -79,7 +79,7 @@ const ResetPasswordCompletePage = () => {
   }
   
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-black to-spotifyGray p-4">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-black to-spotifyGray p-4 pt-16 md:pt-0">
      
       <div className="flex items-center mb-6">
           <img src="/logoEduSic.png" alt="EduSic" className="w-24 h-24 mx-auto" />

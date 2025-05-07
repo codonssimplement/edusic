@@ -117,9 +117,9 @@ const CatalogPage = () => {
   const allLevels = Array.from(new Set(subjects.flatMap(subject => subject.levels)));
 
   return (
-    <div>
+    <div className="pt-16 md:pt-0">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
-        <h1 className="text-3xl font-bold text-white flex items-center gap-3">
+        <h1 className="text-2xl font-bold text-white flex items-center gap-3">
           <BookOpen className="text-eduPurple" /> Catalogue des Matières
         </h1>
         

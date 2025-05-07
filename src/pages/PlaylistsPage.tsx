@@ -45,21 +45,21 @@ const PlaylistsPage = () => {
   const [playlists, setPlaylists] = useState(samplePlaylists);
 
   return (
-    <div>
+    <div className="pt-16 md:pt-0">
       <div className="flex justify-between items-center mb-8">
-        <h1 className="text-3xl font-bold text-white">Mes Playlists</h1>
+        <h1 className="text-2xl font-bold text-white flex items-center gap-2"><Music className="text-eduPurple" size={20} />Mes Playlists</h1>
         <Button 
           className="bg-eduPurple hover:bg-eduPurple/90 text-white"
           onClick={() => navigate("/playlists/create")}
         >
-          <PlusCircle className="mr-2" size={18} />
-          Créer une playlist
+          <PlusCircle className="mr-4" size={24} />
+          Nouvelle playlist
         </Button>
       </div>
 
       {playlists.length === 0 ? (
         <div className="text-center py-20 bg-spotifyGray bg-opacity-30 rounded-lg">
-          <Music size={48} className="text-spotifyLightGray mx-auto mb-4" />
+          <Music size={24} className="text-spotifyLightGray mx-auto mb-4" />
           <h2 className="text-2xl font-bold text-white mb-2">Aucune playlist</h2>
           <p className="text-spotifyLightGray mb-6">
             Créez votre première playlist pour organiser vos cours préférés
@@ -68,8 +68,8 @@ const PlaylistsPage = () => {
             className="bg-eduPurple hover:bg-eduPurple/90 text-white"
             onClick={() => navigate("/playlists/create")}
           >
-            <PlusCircle className="mr-2" size={18} />
-            Créer une playlist
+            <PlusCircle className="mr-4" size={24} />
+            Nouvelle playlist
           </Button>
         </div>
       ) : (
@@ -96,11 +96,11 @@ const PlaylistsPage = () => {
               </CardHeader>
               <CardContent className="flex justify-between text-spotifyLightGray text-sm">
                 <div className="flex items-center">
-                  <Music size={14} className="mr-1" />
+                  <Music size={24} className="mr-1" />
                   <span>{playlist.courseCount} cours</span>
                 </div>
                 <div className="flex items-center">
-                  <Clock size={14} className="mr-1" />
+                  <Clock size={24} className="mr-1" />
                   <span>{playlist.duration}</span>
                 </div>
               </CardContent>
@@ -127,8 +127,8 @@ const PlaylistsPage = () => {
           <Card className="bg-black/30 border-gray-800 border-dashed h-full flex flex-col justify-center items-center p-8 hover:bg-black/50 transition-colors cursor-pointer"
             onClick={() => navigate("/playlists/create")}
           >
-            <PlusCircle size={48} className="text-eduPurple mb-4" />
-            <h3 className="text-white text-lg font-medium mb-2">Créer une playlist</h3>
+            <PlusCircle size={24} className="text-eduPurple mb-4" />
+            <h3 className="text-white text-lg font-medium mb-2"> Nouvelle playlist</h3>
             <p className="text-spotifyLightGray text-center">
               Organisez vos cours préférés et créez des parcours d'apprentissage
             </p>

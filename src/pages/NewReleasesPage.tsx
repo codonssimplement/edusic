@@ -77,7 +77,7 @@ const NewReleasesPage = () => {
   };
 
   return (
-    <div className="pb-20">
+    <div className="pb-20 pt-16 md:pt-0">
       <motion.div 
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -88,7 +88,7 @@ const NewReleasesPage = () => {
           <div className="bg-eduPurple/20 p-2 rounded-lg">
             <TrendingUp className="text-eduPurple" size={28} />
           </div>
-          <h1 className="text-3xl font-bold text-white">Nouveautés</h1>
+          <h1 className="text-2xl font-bold text-white">Nouveautés</h1>
         </div>
         <p className="text-spotifyLightGray max-w-2xl">
           Découvrez nos nouveaux cours en musique pour apprendre plus efficacement. Mis à jour régulièrement pour accompagner votre parcours académique.

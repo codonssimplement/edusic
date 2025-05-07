@@ -65,9 +65,9 @@ const ExercisesPage = () => {
   };
 
   return (
-    <div>
+    <div className="pt-16 md:pt-0">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8">
-        <h1 className="text-3xl font-bold text-white mb-2 sm:mb-0 flex items-center gap-3">
+        <h1 className="text-2xl font-bold text-white mb-2 sm:mb-0 flex items-center gap-3">
           <Book className="text-eduPurple" /> Exercices
         </h1>
         
@@ -84,7 +84,7 @@ const ExercisesPage = () => {
       </div>
 
       <Tabs defaultValue={activeTab} onValueChange={setActiveTab} className="w-full">
-        <TabsList className="bg-spotifyGray grid grid-cols-2 md:grid-cols-4 mb-8">
+        <TabsList className="bg-spotifyGray grid grid-cols-2 md:grid-cols-4 mb-16">
           <TabsTrigger value="mathématiques">Mathématiques</TabsTrigger>
           <TabsTrigger value="physique">Physique</TabsTrigger>
           <TabsTrigger value="histoire">Histoire</TabsTrigger>

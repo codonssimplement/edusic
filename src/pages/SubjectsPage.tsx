@@ -84,10 +84,10 @@ const SubjectsPage = () => {
   };
 
   return (
-    <PageTransition>
-      <div>
+    <PageTransition >
+      <div className="pt-16 md:pt-0">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8">
-          <h1 className="text-3xl font-bold text-white mb-4 md:mb-0 flex items-center gap-3">
+          <h1 className="text-2xl font-bold text-white mb-4 md:mb-0 flex items-center gap-3">
             <BookOpen className="text-eduPurple" /> Matières
           </h1>
           
