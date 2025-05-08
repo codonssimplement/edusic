@@ -84,7 +84,7 @@ const ExercisesPage = () => {
       </div>
 
       <Tabs defaultValue={activeTab} onValueChange={setActiveTab} className="w-full">
-        <TabsList className="bg-spotifyGray grid grid-cols-2 md:grid-cols-4 mb-16">
+        <TabsList className="bg-spotifyGray grid grid-cols-2 md:grid-cols-4 mb-8">
           <TabsTrigger value="mathématiques">Mathématiques</TabsTrigger>
           <TabsTrigger value="physique">Physique</TabsTrigger>
           <TabsTrigger value="histoire">Histoire</TabsTrigger>

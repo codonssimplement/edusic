@@ -29,6 +29,7 @@ import PlaylistsPage from "./pages/PlaylistsPage";
 import CreatePlaylistPage from "./pages/CreatePlaylistPage";
 import CatalogPage from "./pages/CatalogPage";
 import SubjectDetailPage from "./pages/SubjectDetailPage";
+import InstallPWAButton from "./components/InstallPWAButton";
 
 const queryClient = new QueryClient();
 
@@ -132,8 +133,10 @@ const App = () => (
               
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
+              
             </Routes>
           </AnimatePresence>
+          <InstallPWAButton />
         </TooltipProvider>
       </AuthProvider>
     </QueryClientProvider>
